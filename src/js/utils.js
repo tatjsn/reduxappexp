@@ -32,14 +32,12 @@ export function sortStates (a, b, value) {
 }
 
 export function fakeRequest (value, cb) {
-  if (value === '')
-    return getStates()
-    var items = getStates().filter((state) => {
-      return matchStateToTerm(state, value)
-    })
-    setTimeout(() => {
-      cb(items)
-    }, 500)
+  var items = value === '' ? getStates() :
+    getStates().filter(state => matchStateToTerm(state, value));
+
+  setTimeout(() => {
+    cb(items)
+  }, 500)
 }
 
 export function getStates() {
