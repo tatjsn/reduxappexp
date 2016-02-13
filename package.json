@@ -18,6 +18,7 @@
     "browser-sync": "*",
     "gulp": "*",
     "react": "*",
+    "react-autocomplete": "^0.2.0",
     "react-dom": "*",
     "react-redux": "*",
     "redux": "*",
